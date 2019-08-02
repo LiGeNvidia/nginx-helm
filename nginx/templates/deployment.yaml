@@ -1,15 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: {{ include "nginx.fullname" . }}
+  labels:
+{{ include "nginx.labels" . | indent 4 }}
 spec:
   selector:
     matchLabels:
-      app: nginx
+      app.kubernetes.io/name: {{ include "nginx.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: nginx
+        app.kubernetes.io/name: {{ include "nginx.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       initContainers:
       - name: content
