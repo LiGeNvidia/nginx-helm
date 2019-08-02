@@ -1,1 +1,13 @@
-hello
+apiVersion: v1
+entries:
+  nginx:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2019-08-02T04:10:55.480648135Z"
+    description: A Helm chart for Kubernetes
+    digest: 6c79e823a339d3410004213be78afa26928cf8f209f87999b081c2c87a0c5e43
+    name: nginx
+    urls:
+    - https://ligenvidia.github.io/nginx-helm/nginx-0.1.0.tgz
+    version: 0.1.0
+generated: "2019-08-02T04:10:55.480076621Z"
