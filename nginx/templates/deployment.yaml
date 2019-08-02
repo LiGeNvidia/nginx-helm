@@ -11,6 +11,21 @@ spec:
       labels:
         app: nginx
     spec:
+      initContainers:
+      - name: content
+        image: bash
+        command:
+        - bash
+        - -c
+        - |
+          cat >/usr/share/nginx/html/index.html <<EOF
+          <html>
+            <body bgcolor="{{ .Values.backgroud }}">
+              <h1>{{ .Values.title }}</h1>
+              <h2>Content:{{ .Values.content }}</h2>
+            </body>
+          </html>
+          EOF
       containers:
       - name: nginx
         image: nginx
@@ -18,12 +33,3 @@ spec:
         - name: http
           containerPort: 80
           protocol: TCP
-        volumeMounts:
-        - name: html
-          mountPath: /usr/share/nginx/html
-          readOnly: true
-      volumes:
-      - name: html
-        configMap:
-          name: nginx-content
-          defaultMode: 0666
