@@ -24,7 +24,7 @@ spec:
         - |
           cat >/usr/share/nginx/html/index.html <<EOF
           <html>
-            <body bgcolor="{{ .Values.backgroud }}">
+            <body bgcolor="{{ .Values.background }}">
               <h1>{{ .Values.title }}</h1>
               <h2>Content:{{ .Values.content }}</h2>
             </body>
