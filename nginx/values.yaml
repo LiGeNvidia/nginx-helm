@@ -1,4 +1,4 @@
 nodePort: "30002"
-backgroud: "red"
+background: "red"
 title: "DeepStream APP with FederatedHelmRelease"
 content: "hello world"
