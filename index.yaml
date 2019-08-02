@@ -3,11 +3,11 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2019-08-02T04:35:42.893081621Z"
+    created: "2019-08-02T04:36:21.224992395Z"
     description: A Helm chart for Kubernetes
-    digest: 9e6edd8e7519853a4bc40179c552aa173271ff7078581bc3360005e5403107b0
+    digest: a44dd275165dfccc590e6357063f0e09b81e5cea4d7be4faa406c91e7b5239c1
     name: nginx
     urls:
     - https://ligenvidia.github.io/nginx-helm/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2019-08-02T04:35:42.891971062Z"
+generated: "2019-08-02T04:36:21.224217885Z"

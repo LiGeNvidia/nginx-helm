@@ -1,4 +1,3 @@
-serviceName: "nginx"
 nodePort: "30002"
 backgroud: "red"
 title: "DeepStream APP with FederatedHelmRelease"
